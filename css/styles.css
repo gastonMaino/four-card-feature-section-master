@@ -1,0 +1,145 @@
+:root {
+  /* primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  /* neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Very-Light-Gray);
+  padding: 50px 20px;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        padding: 50px 100px;
+    }
+}
+
+.header{
+    text-align: center;
+}
+
+.header__title{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+}
+
+.header__span{
+    display: block;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+
+.header__paragraph,
+.header__span--paragraph{
+    color: var(--Grayish-Blue);
+    font-weight: 200;
+    margin-bottom: 80px;
+}
+
+.header__span--paragraph{
+    display: inline;
+}
+
+
+@media screen and (min-width: 768px){
+    .header__span--paragraph{
+        display: block;
+    }
+}
+
+.section{
+    display: grid;
+}
+
+@media screen and (min-width: 768px){
+    .section{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+        grid-template-areas: 
+        ".      card1       ."
+        "card2  card1   card3"
+        "card2  card4   card3"
+        ".      card4       .";
+    }
+}
+
+.box-element{
+    text-align: left;
+    background-color: #ffff;
+    padding: 0 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.box-element:nth-child(1){
+    border-top: 4px solid hsl(180, 62%, 55%);
+    box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box-element:nth-child(2){
+    border-top: 4px solid hsl(0, 78%, 62%);
+    box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box-element:nth-child(3){
+    border-top: 4px solid hsl(34, 97%, 64%);
+    box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box-element:nth-child(4){
+    border-top: 4px solid hsl(212, 86%, 64%);
+    box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width:768px){
+    .box-element:nth-child(1){
+        padding: 0 30px;
+        grid-area: card2;
+    }
+    
+    .box-element:nth-child(2){
+        padding: 0 30px;
+        grid-area: card1;
+    }
+    
+    .box-element:nth-child(3){
+        padding: 0 30px;
+        grid-area: card4;
+    }
+    
+    .box-element:nth-child(4){
+        padding: 0 30px;
+        grid-area: card3;
+    }
+}
+
+.box-element__title{
+    color: var(--Very-Dark-Blue);
+}
+
+.box-element__paragraph{
+    color: var(--Grayish-Blue);
+    font-weight: 200;
+}
+
+.box-element__picture{
+    float: right;
+    margin: 15px 15px;   
+}
+
+@media screen and (min-width:768px){
+    .box-element__picture{
+        margin: 15px 0;
+    }
+}
