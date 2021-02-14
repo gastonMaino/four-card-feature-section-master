@@ -19,7 +19,7 @@ body {
 
 @media screen and (min-width: 768px){
     body{
-        padding: 50px 100px;
+        padding: 70px 100px;
     }
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .header__title{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 200;
     color: var(--Grayish-Blue);
 }
